@@ -1,0 +1,165 @@
+sw_volume: 100
+audio_device_state:1:My ALSA Device
+audio_device_state:1:my_fifo
+state: pause
+current: 5
+time: 31.485000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Music/Dance With The Dead [FLAC]/2017 - B-Sides Vol. 1/11. Venom.flac
+1:Music/Shpongle - Museum Of Consciousness (Limited) [2013]/07 - Tickling The Amygdala.flac
+2:Music/Shpongle - Museum Of Consciousness (Limited) [2013]/02 - How The Jellyfish Jumped Up The Mountain.flac
+3:Music/Shpongle - Museum Of Consciousness (Limited) [2013]/01 - Brain In A Fishtank.flac
+4:Music/Omnia - Earth Warrior (2014) [Flac]/07 - Epona.flac
+5:Music/Zack Hemsey (FLAC)/Singles/2010 - Mind Heist/01. Zack Hemsey - Mind Heist.flac
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 0-88560
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 01
+Title: Vis Divina
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 88560-464600
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 02
+Title: Rising From Tragic Flames
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 464600-890360
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 03
+Title: Angel of Light
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 890360-1277813
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 04
+Title: Tears of Pain
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 1277813-1591173
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 05
+Title: Fly to Crystal Skies
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 1591173-2076760
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 06
+Title: My Sacrifice
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 2076760-2377640
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 07
+Title: Silver Lake of Tears
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 2377640-2684840
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 08
+Title: Custode di Pace
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 2684840-2943160
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 09
+Title: A Tale of Magic
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 2943160-3294920
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 10
+Title: Dark Wings of Steel
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 3294920-3572426
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 11
+Title: Sad Mystic Moon
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+song_begin: Music/Rhapsody Of Fire 2013 - Dark Wings Of Steel (Limited Edition) (EAC-FLAC)/Rhapsody of Fire - Dark Wings of Steel.flac
+Range: 3572426-
+Time: 3988.746000
+Genre: Symphonic Power Metal
+Date: 2013
+AlbumArtist: Rhapsody of Fire
+Album: Dark Wings of Steel
+Track: 12
+Title: A Candle to Light (Extended Version) (Bonus Track)
+Artist: Rhapsody of Fire
+mtime: 1498554424
+song_end
+playlist_end

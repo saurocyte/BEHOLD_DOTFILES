@@ -1,0 +1,11 @@
+There is a deluge daemon running with this config directory!
+You cannot run multiple daemons with the same config directory set.
+If you believe this is an error, you can force a start by deleting /home/defaultuser/.config/deluge/deluged.pid.
+There is a deluge daemon running with this config directory!
+You cannot run multiple daemons with the same config directory set.
+If you believe this is an error, you can force a start by deleting /home/defaultuser/.config/deluge/deluged.pid.
+There is a deluge daemon running with this config directory!
+You cannot run multiple daemons with the same config directory set.
+If you believe this is an error, you can force a start by deleting /home/defaultuser/.config/deluge/deluged.pid.
+Unable to backup /home/defaultuser/.config/deluge/state/torrents.state to /home/defaultuser/.config/deluge/state/torrents.state.bak: [Errno 2] No such file or directory
+on_alert_fastresume_rejected: Streets.of.Rogue.Alpha.40b.rar fast resume rejected. (/home/defaultuser/Downloads/Streets.of.Rogue.Alpha.40b.rar): mismatching file size

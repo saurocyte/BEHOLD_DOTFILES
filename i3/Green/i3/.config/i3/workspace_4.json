@@ -1,0 +1,79 @@
+// vim:ts=4:sw=4:et
+{
+    // floating_con with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 218,
+       "width": 298,
+       "x": 513,
+       "y": 529
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "user_on",
+            "geometry": {
+               "height": 460,
+               "width": 680,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cava",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Termite$",
+               // "instance": "^termite$",
+               // "title": "^cava$",
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // floating_con with 1 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 408,
+       "width": 628,
+       "x": 360,
+       "y": 85
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "user_on",
+            "geometry": {
+               "height": 460,
+               "width": 680,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Nico Vega - Million Years",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Termite$",
+               // "instance": "^termite$",
+               // "title": "^Nico\\ Vega\\ \\-\\ Million\\ Years$",
+                "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
