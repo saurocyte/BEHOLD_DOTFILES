@@ -4,7 +4,7 @@
 }{
   "close_to_tray": false, 
   "ntf_sound_path": "/home/defaultuser/Downloads", 
-  "window_width": 1310, 
+  "window_width": 644, 
   "default_load_path": null, 
   "window_y_pos": 59, 
   "ntf_email": false, 
@@ -50,7 +50,7 @@
   "ntf_username": "", 
   "interactive_add": true, 
   "sidebar_show_zero": false, 
-  "window_x_pos": 24, 
+  "window_x_pos": 690, 
   "window_height": 677, 
   "ntf_security": null, 
   "connection_limit_list": [
@@ -60,7 +60,7 @@
     300, 
     500
   ], 
-  "sidebar_position": 299, 
+  "sidebar_position": 342, 
   "show_new_releases": true, 
   "autoconnect": false, 
   "choose_directory_dialog_path": "/home/win/e", 
