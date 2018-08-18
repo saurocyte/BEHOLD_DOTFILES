@@ -43,7 +43,7 @@
   "pref_dialog_width": 500, 
   "autoconnect_host_id": null, 
   "classic_mode": true, 
-  "window_pane_position": 341, 
+  "window_pane_position": 331, 
   "focus_main_window_on_add": true, 
   "show_rate_in_title": false, 
   "autoadd_enable": false, 
@@ -60,7 +60,7 @@
     300, 
     500
   ], 
-  "sidebar_position": 207, 
+  "sidebar_position": 299, 
   "show_new_releases": true, 
   "autoconnect": false, 
   "choose_directory_dialog_path": "/home/win/e", 

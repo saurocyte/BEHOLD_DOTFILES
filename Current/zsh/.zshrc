@@ -42,6 +42,8 @@ alias prsn='sudo pacman -Rsn'
 alias ts='trizen -S'
 alias tss='trizen -Ss'
 
+alias orgmachine='emacs'
+
 # Plugins
 source ~/.zplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zplugins/zsh-autosuggestions/zsh-autosuggestions.zsh

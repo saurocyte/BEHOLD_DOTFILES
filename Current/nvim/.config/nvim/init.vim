@@ -29,6 +29,8 @@ call plug#begin()
 	Plug 'ryanoasis/vim-devicons'
 	" Distraction - free mode
 	Plug 'junegunn/goyo.vim'
+	" Org mode
+	Plug 'jceb/vim-orgmode'
 
 call plug#end()
 
