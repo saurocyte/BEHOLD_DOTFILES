@@ -1,90 +1,142 @@
+"
+"   ██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
+"   ██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
+"   ██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
+"   ██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
+"   ██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+"   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+"
 """ Plugins
-
 call plug#begin()
-	" Recent files menu
-	Plug 'vim-scripts/mru.vim'
-	" Status line
-	Plug 'itchyny/lightline.vim'
-	" Start screen
-	Plug 'mhinz/vim-startify'
-	" Wiki thing
-	Plug 'vimwiki/vimwiki'
-	" Onedark theme (from atom)
-	Plug 'joshdick/onedark.vim'
-	" For creating tables
-	Plug 'dhruvasagar/vim-table-mode'
-	" Gruvbox theme
-	Plug 'morhetz/gruvbox'
-	" Sneak motion
-	Plug 'justinmk/vim-sneak'
-	" Stuff with parenteses
-	Plug 'tpope/vim-surround'
-	" Color preview
-	Plug 'gko/vim-coloresque'
-	" Dim inactive panels
-	Plug 'blueyed/vim-diminactive'
-	" Modified gruvbox lightline theme
-	Plug 'jakobgm/lightline-gruvbox.vim', { 'branch': 'patch-1' }  
-	" Devicons
-	Plug 'ryanoasis/vim-devicons'
-	" Distraction - free mode
-	Plug 'junegunn/goyo.vim'
-	" Org mode
-	Plug 'jceb/vim-orgmode'
-
+	"Fast, normal, slowish, shit
+	let conf = 'normal+complete'
+	if conf == 'minimal'
+		source ~/.config/nvim/minimal.vim
+	endif
+	if conf == 'normal'
+		source ~/.config/nvim/normal.vim
+	endif
+	if conf == 'normal+complete'
+		source ~/.config/nvim/normal+complete.vim
+	endif
+	if conf == 'overkill'
+		source ~/.config/nvim/overkill.vim
+	endif
+	if conf == 'latex'
+		source ~/.config/nvim/latex.vim
+	endif
 call plug#end()
-
 """ Colorscheme
-
-"-> Onedark
-" let g:onedark_termcolors=256
-" let g:onedark_terminal_italics=1
-" colorscheme onedark
-" let g:lightline = {
-"   \ 'colorscheme': 'onedark',
-"   \ }
-
-"-> Gruvbox
-colorscheme gruvbox
-set background=dark
-let g:lightline = {
- \ 'colorscheme': 'gruvbox',
- \ }
-
-
+colorscheme Tomorrow-Night
+""" Functions
+" Close buffer without closing split 
+function s:Kwbd(kwbdStage)
+  if(a:kwbdStage == 1)
+    if(!buflisted(winbufnr(0)))
+      bd!
+      return
+    endif
+    let s:kwbdBufNum = bufnr("%")
+    let s:kwbdWinNum = winnr()
+    windo call s:Kwbd(2)
+    execute s:kwbdWinNum . 'wincmd w'
+    let s:buflistedLeft = 0
+    let s:bufFinalJump = 0
+    let l:nBufs = bufnr("$")
+    let l:i = 1
+    while(l:i <= l:nBufs)
+      if(l:i != s:kwbdBufNum)
+        if(buflisted(l:i))
+          let s:buflistedLeft = s:buflistedLeft + 1
+        else
+          if(bufexists(l:i) && !strlen(bufname(l:i)) && !s:bufFinalJump)
+            let s:bufFinalJump = l:i
+          endif
+        endif
+      endif
+      let l:i = l:i + 1
+    endwhile
+    if(!s:buflistedLeft)
+      if(s:bufFinalJump)
+        windo if(buflisted(winbufnr(0))) | execute "b! " . s:bufFinalJump | endif
+      else
+        enew
+        let l:newBuf = bufnr("%")
+        windo if(buflisted(winbufnr(0))) | execute "b! " . l:newBuf | endif
+      endif
+      execute s:kwbdWinNum . 'wincmd w'
+    endif
+    if(buflisted(s:kwbdBufNum) || s:kwbdBufNum == bufnr("%"))
+      execute "bd! " . s:kwbdBufNum
+    endif
+    if(!s:buflistedLeft)
+      set buflisted
+      set bufhidden=delete
+      set buftype=
+      setlocal noswapfile
+    endif
+  else
+    if(bufnr("%") == s:kwbdBufNum)
+      let prevbufvar = bufnr("#")
+      if(prevbufvar > 0 && buflisted(prevbufvar) && prevbufvar != s:kwbdBufNum)
+        b #
+      else
+        bn
+      endif
+    endif
+  endif
+endfunction
+command! Kwbd call s:Kwbd(1)
+nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 """ Keybindings
+" Closing brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+
+" Tabs
+noremap <C-Tab> :<C-U>next<CR>
+inoremap <C-Tab> <C-\><C-N>:next<CR>
+cnoremap <C-Tab> <C-C>:next<CR>
+noremap <C-S-Tab> :<C-U>previous<CR>
+inoremap <C-S-Tab> <C-\><C-N>:previous<CR>
+cnoremap <C-S-Tab> <C-C>:previous<CR>
 
 " Remap ; to :
-nnoremap ; :
+noremap ; :
 
 " Open and close folds with Enter
-nnoremap <expr> <cr>   foldlevel(line('.'))  ? "za" : "\<cr>"
+noremap <expr> <cr>   foldlevel(line('.'))  ? "za" : "\<cr>"
+
+" Buffers
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+map ga :ba<cr>
+nmap gc <Plug>Kwbd
 
 """ Look
-
-" If enabled, LineNr, CursorLineNr and CursorLine do not work
+" gui* is cterm for truecolors
 set termguicolors
+set background=dark
 
 "-> Line numbers
 " Enable numbers
 set number
-
-" Number columb width
+" Number column width
 set numberwidth=3
-
 " Non highlighted numbers color
-hi LineNr ctermfg=grey
+hi LineNr ctermfg=grey guifg=grey
 
 "-> Line highlight
 " Line (including numbers) highlight
 set cursorline
-
 " Make highlighted number bold
-hi CursorLineNr cterm=bold
-
+hi CursorLineNr cterm=bold gui=bold
 " Do not show highlight
-hi CursorLine cterm=NONE
-
+hi CursorLine cterm=NONE guibg=NONE
 " Do not show -- Insert --
 set noshowmode
 
@@ -92,23 +144,20 @@ set noshowmode
 " Show tabline
 set showtabline=2  " always show tabline
 
+"-> Fold highlight
+hi Folded guibg=NONE
 """ Formatting
-
-" Closing brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {<cr><cr>}<up><tab>
+set autoindent
+set smartindent
 
 " Tab = 4 spaces
 set shiftwidth=4
 set tabstop=4	
 
-""" Plugin specific
-
-
-
+" Disable wrapping
+set nowrap
+" Current dir = file dir
+set autochdir
 ""
 " """ - category
 " ->  - subcategory

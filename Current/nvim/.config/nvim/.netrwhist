@@ -1,2 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/boi/Dotfiles/Current/fish/.config/fish'
+let g:netrw_dirhist_2='/home/boi/Dotfiles/Current/nvim/.config/nvim'
+let g:netrw_dirhist_3='/home/boi/Dotfiles/Current/i3/.config/i3'
+let g:netrw_dirhist_4='/home/boi/123/clj/mq/src/mq'
+let g:netrw_dirhist_5='/home/boi'
+let g:netrw_dirhist_6='/home/boi/Code/rsschool/sudoku'
+let g:netrw_dirhist_7='/home/boi/Code/data'

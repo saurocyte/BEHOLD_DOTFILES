@@ -1,0 +1,10 @@
+#!
+
+echo "Failed login attempt at $(date)" >> ~/.i3lock-script.log
+
+source ~/.config/i3/system-info.sh
+if [ -n "$MAIN_WEBCAM" ]
+then
+	pic_name="login-fail-$(date +%Y%m%d-%H%M%S).jpg"
+	ffmpeg -i /dev/video0 -frames 1 ~/$pic_name
+fi
