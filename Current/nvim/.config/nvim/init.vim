@@ -8,8 +8,9 @@
 "
 """ Plugins
 call plug#begin()
-	"Fast, normal, slowish, shit
-	let conf = 'normal+complete'
+	"Fast, normal, slowish, shit, useful mb
+	let conf = 'normal'
+
 	if conf == 'minimal'
 		source ~/.config/nvim/minimal.vim
 	endif
@@ -24,6 +25,9 @@ call plug#begin()
 	endif
 	if conf == 'latex'
 		source ~/.config/nvim/latex.vim
+	endif
+	if conf == 'new'
+		source ~/.config/nvim/new.vim
 	endif
 call plug#end()
 """ Colorscheme

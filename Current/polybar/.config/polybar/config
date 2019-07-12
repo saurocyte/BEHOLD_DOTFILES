@@ -76,8 +76,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:0:...%
-label-maxlen = 90
+label = %title:0:65:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -153,7 +152,7 @@ label-unfocused = ${wm_settings.icon_unfocused}
 label-unfocused-padding = ${wm_settings.padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = ${wm_settings.icon_focused}
+label-urgent = ${wm_settings.icon_unfocused}
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 

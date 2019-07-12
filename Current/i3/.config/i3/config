@@ -152,15 +152,13 @@ for_window [class=".*"] border pixel 4
 #---------------STARTUP--------------------#
 ############################################
 # Compton
-exec_always --no-startup-id compton
+exec_always --no-startup-id compton --log-file=~/compton.log --log-level=DEBUG
 # Polybar 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Feh (wallpaper)
 exec_always --no-startup-id ~/.fehbg
 # i3lock
 # exec_always --no-startup-id xautolock -locker i3lock --script -i -notify 30 -time 10
-# Dunst
-exec_always --no-startup-id dunst
 # Wal
 exec_always --no-startup-id wal -R
 ############################################
