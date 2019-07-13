@@ -1,4 +1,4 @@
-# Configs
+<h1 align="center">Configs</h1>
 
 <img src="./img.png" align="center">
 
