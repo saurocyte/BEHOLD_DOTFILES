@@ -7,31 +7,13 @@
 "   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
 "
 """ Plugins
-call plug#begin()
-	"Fast, normal, slowish, shit, useful mb
-	let conf = 'normal'
-
-	if conf == 'minimal'
-		source ~/.config/nvim/minimal.vim
-	endif
-	if conf == 'normal'
-		source ~/.config/nvim/normal.vim
-	endif
-	if conf == 'normal+complete'
-		source ~/.config/nvim/normal+complete.vim
-	endif
-	if conf == 'overkill'
-		source ~/.config/nvim/overkill.vim
-	endif
-	if conf == 'latex'
-		source ~/.config/nvim/latex.vim
-	endif
-	if conf == 'new'
-		source ~/.config/nvim/new.vim
-	endif
-call plug#end()
-""" Colorscheme
-colorscheme Tomorrow-Night
+let conf = 'normal'
+if conf == 'minimal'
+	source ~/.config/nvim/minimal.vim
+endif
+if conf == 'normal'
+	source ~/.config/nvim/normal.vim
+endif
 """ Functions
 " Close buffer without closing split 
 function s:Kwbd(kwbdStage)
@@ -162,6 +144,10 @@ set tabstop=4
 set nowrap
 " Current dir = file dir
 set autochdir
+set modelineexpr
+
+" Autosave
+set autowrite
 ""
 " """ - category
 " ->  - subcategory

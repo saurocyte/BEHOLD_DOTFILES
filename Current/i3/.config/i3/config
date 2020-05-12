@@ -47,7 +47,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 # focus the parent container
@@ -66,7 +66,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10% 
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
 # Wal
-bindsym $mod+z exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
+bindsym $mod+z exec --no-startup-id wal -is $HOME/Pictures/Wallpapers
 # Print Screen
 bindsym Print exec import -window root png:- | xclip -selection c -t image/png
 ############################################
@@ -134,14 +134,14 @@ bindsym $mod+r mode "resize"
 ############################################
 #-------------BORDERS/GAPS-----------------#
 ############################################
-# Gaps Gaps Gaps
+# Gaps
 gaps inner 15
 gaps outer 10
 set $mode_gaps Toggle gaps: (1) on (2) off
-bindsym $mod+o mode "$mode_gaps"
+bindsym $mod+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 15, gaps outer all set 10, border pixel 4
-    bindsym 2 mode "default", gaps inner all set 0, gaps outer all set 0, border pixel 1
+    bindsym 1 mode "default", gaps inner all set 15, gaps outer all set 10, border pixel 4, exec polybar-msg cmd show
+    bindsym 2 mode "default", gaps inner all set 0, gaps outer all set 0, border pixel 1, exec polybar-msg cmd hide
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -151,26 +151,22 @@ for_window [class=".*"] border pixel 4
 ############################################
 #---------------STARTUP--------------------#
 ############################################
-# Compton
-exec_always --no-startup-id compton --log-file=~/compton.log --log-level=DEBUG
-# Polybar 
+exec_always --no-startup-id compton --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method exchange
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-# Feh (wallpaper)
 exec_always --no-startup-id ~/.fehbg
-# i3lock
 # exec_always --no-startup-id xautolock -locker i3lock --script -i -notify 30 -time 10
-# Wal
-exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -Rs
+exec_always --no-startup-id dunst -Rs
 ############################################
 #-----------------COLORS-------------------#
 ############################################
 # use xrdb colors
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color5 #f0f0f0
+set_from_resource $fg i3wm.color9 #000000
+set_from_resource $bg i3wm.color13 #f0f0f0
 
 # class                 border  backgr  text indicator child_border
-client.focused          $fg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.focused          $fg     $bg     $fg  $fg       $fg
+client.focused_inactive $bg     $bg     $fg  $bg       $fg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg

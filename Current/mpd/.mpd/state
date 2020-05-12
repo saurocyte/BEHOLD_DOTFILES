@@ -1,9 +1,9 @@
-sw_volume: 59
+sw_volume: 65
 audio_device_state:1:My Pulse Output
 audio_device_state:1:my_fifo
-state: pause
-current: 7
-time: 105.890000
+state: play
+current: 3
+time: 4.120000
 random: 0
 repeat: 0
 single: 0
@@ -12,140 +12,8 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 5000-71160
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 01
-Title: Intro
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 71160-266560
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 02
-Title: Last Living Souls
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 266560-499400
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 03
-Title: Kids With Guns
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 499400-780000
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 04
-Title: O Green World
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 780000-1008160
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 05
-Title: Dirty Harry
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 1008160-1230000
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 06
-Title: Feel Good Inc.
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 1230000-1469360
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 07
-Title: El Maňana
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 1469360-1762626
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 08
-Title: Every Planet We Reach Is Dead
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 1762626-1928000
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 09
-Title: November Has Come
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 1928000-2140800
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 10
-Title: All Alone
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 2140800-2271226
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 11
-Title: White Light
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 2271226-2515533
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 12
-Title: Dare
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 2515533-2712960
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 13
-Title: Fire Coming Out Of The Monkey's Head
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 2712960-2845333
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 14
-Title: Don't Get Lost in Heaven
-mtime: 1558132239
-song_end
-song_begin: Gorillaz - Demon Days - 2005 -2017 - LP/Gorillaz - Demon Days - 2005 -2017 - LP.flac
-Range: 2845333-
-Time: 3132.458000
-AlbumArtist: Gorillaz
-Album: Demon Days
-Track: 15
-Title: Demon Days
-mtime: 1558132239
-song_end
+0:2017.10.06 - Rat Jacket - EP/01 Blacken the Other Eye.m4a
+1:2017.10.06 - Rat Jacket - EP/02 Total Immunity.m4a
+2:2017.10.06 - Rat Jacket - EP/03 Early Release.m4a
+3:2017.10.06 - Rat Jacket - EP/04 In Prison, at Least I Had You.m4a
 playlist_end
