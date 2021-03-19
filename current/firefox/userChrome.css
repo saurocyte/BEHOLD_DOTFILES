@@ -1,0 +1,84 @@
+.titlebar-buttonbox-container {
+   position: fixed !important;
+   right: -90px !important; /* Move it to right side (adjust for caption buttons) */
+   top: -5px !important;/*remember padding tabs-13*/
+}
+
+:root[tabsintitlebar] .titlebar-buttonbox{
+  position: fixed; /* Fixed position for menu */
+  right: 90px !important; /* Move it to right side (adjust for caption buttons) */
+  top: 0px !important;/*remember padding tabs*/
+  border-left: none !important; /* Remove menu border */
+}
+
+/*probably not needed:*/
+hbox.titlebar-buttonbox-container:nth-child(6) > hbox:nth-child(1){
+   display: none !important;
+}
+
+
+:root {
+  --sidebar-width: 180px;
+  --toolbar-height: -26px;
+  --menubar-height: -41px;
+  --toolmenubar-height: -77px; /* sum of previous two */
+}
+
+/* show bookmarks toolbar on new tab only */
+#main-window #PersonalToolbar {
+  visibility: collapse !important;
+  z-index: 1!important;
+  position: relative!important;
+  margin-left: var(--sidebar-width);*/ /* shift toolbar to the right out of the way of the sidebar */
+  margin-top: var(--toolbar-height) !important;
+}
+
+/*#main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
+  visibility: visible !important;
+  margin-top: -1px !important;
+}/
+
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  z-index: 1000 !important;
+  position: relative!important;
+  margin-top: var(--menubar-height) !important;
+  border-right: 1px solid #ccc;
+}
+
+#main-window[title^="Firefox Developer Edition"] #sidebar-box {
+  margin-top: var(--toolmenubar-height) !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box, #sidebar-box #sidebar {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+}
+
+/* hide sidebar header for tree style tabs sidebar */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/* Hide the title bar 
+#titlebar{ visibility: collapse; }*/
+
+/* hide normal horizontal tab bar */
+#TabsToolbar { display: none !important; }
+
+toolbar#nav-bar {
+  padding-top: 12px;
+  padding-bottom: 7px;
+  margin-left: var(--sidebar-width);
+  padding-left: 7px;
+}
+
+/*#sidebar-splitter{
+   width: 2px !important;
+   background-color: transparent !important;
+   box-shadow: inset 8px 0px 14px -8px ThreeDShadow !important;
+   border: none !important;
+   border-left: 3px solid Window !important;
+}
+*/
