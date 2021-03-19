@@ -4,14 +4,14 @@ if status is-login
 end
 
 # Variables
-set D '/home/win/D'
-set C '/home/win/C'
+set D /home/win/D
+set C /home/win/C
 
 # Exports
 set -x EDITOR nvim
-set -x PATH $PATH "$HOME/.cargo/bin"
-set -x PATH $PATH "$HOME/.emacs.d/bin"
-set -x PATH $PATH "$HOME/.yarn/bin"
+set -x PATH $PATH $HOME/.cargo/bin
+set -x PATH $PATH $HOME/.emacs.d/bin
+set -x PATH $PATH $HOME/.yarn/bin
 set -x MOZ_USE_XINPUT2 1
 set -x GTK_THEME Adwaita:dark
 
@@ -32,3 +32,5 @@ alias ls exa
 alias _copy 'xclip -selection clipboard'
 alias _paste 'xclip -o -selection clipboard'
 alias shadow-cljs 'npx shadow-cljs'
+alias cat bat
+alias dragon dragon-drag-and-drop
