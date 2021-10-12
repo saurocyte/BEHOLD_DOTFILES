@@ -1,0 +1,84 @@
+client='192.168.70.104'
+
+function list_interfaces2 {
+  ip link | awk '{print $2}' | sed -n 'p;n'
+}
+
+function kill_socket_process {
+  sudo ss -apn | grep $1 | grep -Po '(?<=pid=)\d+' | sort -u | sudo xargs -L1 kill -KILL
+}
+
+function start_server {
+  sudo ~/hipserver ~/hipflowapp
+}
+
+function fetch_log {
+  scp "user1@${client}:CodeWrights/hip${1}.qa.log" ~/logs/
+}
+
+function ssh_into_client {
+  ssh user1@$client
+}
+
+function get_ip_tables() {
+  ip route show table all | grep "table" | sed 's/.*\(table.*\)/\1/g' | awk '{print $2}' | sort | uniq
+}
+
+# passwd
+function get_users() {
+  awk -F':' '$4 == 100 { print $0 }' $1
+}
+
+function match_passwords() {
+  shadow_file=$1
+  users_file=$2
+  awk -F':' 'NR == FNR {first[$1];next} $1 in first' $users_file $shadow_file
+}
+
+function difference() {
+  # Outputs items missing in $file1 (differing in the 1st field)
+  awk -F':' 'NR == FNR {first[$1];next}; ! ($1 in first)' $1 $2
+}
+
+function duplicates() {
+   awk -F':' 'a[$1]++{print $1}' $1
+}
+
+function merge() {
+  difference $1 $2 > temp
+  cat $1 > ${1}_merged
+  cat temp >> ${1}_merged
+  rm temp
+}
+
+function list_interfaces() {
+  ip link show up | awk -F'[:\s|\@]' 'NR % 2 {print $2}' | cut -c2-
+}
+
+# VPN
+ss=strongswan-starter
+alias ss_i=strongswan-starter
+alias ss_r='sudo systemctl restart $ss'
+alias ss_m='sudo journalctl -u $ss'
+alias ss_c='sudo vi /etc/ipsec.conf'
+alias sctl='sudo swanctl'
+alias log='sudo journalctl -u'
+alias svim='sudo vim'
+
+function iptables_dump() {
+  sudo iptables-save | sed -e 's/\[[0-9:]*\]/[0,0]/' -e '/^#/d'
+}
+
+function reload() {
+  source ~/.bashrc
+}
+
+function cer_to_crt_1() {
+  openssl x509 -inform DER -in $1 -out $(basename $1 .cer).crt
+}
+
+function cer_to_crt_2() {
+  openssl x509 -inform PEM -in $1 -out $(basename $1 .cer).crt
+}
+
+# vim: filetype=bash
