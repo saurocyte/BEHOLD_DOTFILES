@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/boi/.config/termite'
-let g:netrw_dirhist_2='/home/boi/.mozilla/firefox'
-let g:netrw_dirhist_3='/home/boi/.mozilla/firefox/63bu65k1.default'
-let g:netrw_dirhist_4='/home/boi/.mozilla/firefox'
-let g:netrw_dirhist_5='/home/boi/.mozilla/firefox/63bu65k1.default'
-let g:netrw_dirhist_6='/home/boi/.mozilla/firefox'

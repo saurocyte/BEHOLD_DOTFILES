@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/boi/.config/ranger'
-let g:netrw_dirhist_2='/home/boi/.config/ranger/plugins'
-let g:netrw_dirhist_3='/home/boi/.config/ranger'
-let g:netrw_dirhist_4='/home/boi/Code/mylabs'
-let g:netrw_dirhist_5='/home/boi/Txt'
-let g:netrw_dirhist_6='/home/boi/Txt/пущай будет'

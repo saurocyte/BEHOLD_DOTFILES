@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/defaultuser/.emacs.d'
-let g:netrw_dirhist_2='/home/defaultuser'
-let g:netrw_dirhist_3='/home/defaultuser/txt/Game Dev'
-let g:netrw_dirhist_4='/home/defaultuser/txt'
-let g:netrw_dirhist_5='/home/defaultuser/dotfiles/ncmpcpp/.ncmpcpp'
-let g:netrw_dirhist_6='/home/defaultuser/C++PrimerExcercises'
