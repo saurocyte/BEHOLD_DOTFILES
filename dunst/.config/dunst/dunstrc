@@ -5,7 +5,7 @@ monitor = 0
 follow = mouse
 geometry = "350x6-19+52"
 indicate_hidden = yes
-shrink = yes
+shrink = no
 
 progress_bar = true
 progress_bar_height = 5
@@ -23,7 +23,7 @@ separator_color = "#f5f5f5"
 
 line_height = 0
 markup = full
-format = "<span size='x-large' font_desc='Cantarell,mplus Nerd Font 9' weight='bold' foreground='#63c5ea'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Cantarell,mplus Nerd Font 9' weight='bold' foreground='#171516'>%s</span>\n%b"
 alignment = center
 vertical_alignment = center
 
@@ -42,7 +42,7 @@ corner_radius = 0
 icon_position = left
 max_icon_size = 80
 
-icon_path = /usr/share/icons/Papirus-Custom/48x48/actions/:/usr/share/icons/Papirus-Custom/48x48/apps/:/usr/share/icons/Papirus-Custom/48x48/devices/:/usr/share/icons/Papirus-Custom/48x48/emblems/:/usr/share/icons/Papirus-Custom/48x48/emotes/:/usr/share/icons/Papirus-Custom/48x48/mimetypes/:/usr/share/icons/Papirus-Custom/48x48/places/:/usr/share/icons/Papirus-Custom/48x48/status/
+icon_path = /usr/share/icons/Papirus-Dark/48x48/actions/:/usr/share/icons/Papirus-Dark/48x48/apps/:/usr/share/icons/Papirus-Dark/48x48/devices/:/usr/share/icons/Papirus-Dark/48x48/emblems/:/usr/share/icons/Papirus-Dark/48x48/emotes/:/usr/share/icons/Papirus-Dark/48x48/mimetypes/:/usr/share/icons/Papirus-Dark/48x48/places/:/usr/share/icons/Papirus-Dark/48x48/status/
 
 browser = firefox
 
@@ -60,16 +60,16 @@ context = ctrl+shift+period
 timeout = 3
 background = "#f9f9f9"
 foreground = "#373e4d"
-highlight = "#fa74b2"
+highlight = "#f6f6f6"
 
 [urgency_normal]
 timeout = 6
 background = "#f9f9f9"
 foreground = "#373e4d"
-highlight = "#fa74b2"
+highlight = "#f6f6f6"
 
 [urgency_critical]
 timeout = 0
 background = "#f9f9f9"
 foreground = "#373e4d"
-highlight = "#fa74b2"
+highlight = "#f6f6f6"

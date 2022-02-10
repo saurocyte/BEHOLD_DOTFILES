@@ -13,7 +13,7 @@ set $mod Mod4
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 # change focus
@@ -154,12 +154,12 @@ for_window [class=".*"] border pixel 4
 ############################################
 #---------------STARTUP--------------------#
 ############################################
-exec_always --no-startup-id compton --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method exchange
+exec_always --no-startup-id picom --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method exchange
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.fehbg
 # exec_always --no-startup-id xautolock -locker i3lock --script -i -notify 30 -time 10
 exec_always --no-startup-id wal -Rs
-exec_always --no-startup-id dunst -Rs
+exec_always --no-startup-id dunst
 ############################################
 #-----------------COLORS-------------------#
 ############################################

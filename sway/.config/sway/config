@@ -1,165 +1,156 @@
-# System font
-font pango:Roboto 10
+#
+# Clipboard setup
+#
+exec_always copyq
+for_window [app_id="copyq"] floating enable, sticky enable, resize set height 600px width 550px, move position cursor, move down 330
 
-############################################
-#-------------MOVEMENT HOTKEYS-------------#
-############################################
-set $up k
-set $down j
-set $left h
-set $right l
-# Set mod key
+#
+# Wallpaper
+#
+output "*" bg ~/Pictures/Wallpapers/1.jpg fill
+
+#
+# Variables
+#
 set $mod Mod4
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-# start a terminal
-bindsym $mod+Return exec st
-# kill focused window
-bindsym $mod+q kill
-# change focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-# move focused window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-# split in horizontal orientation
-bindsym $mod+c split h
-# split in vertical orientation
-bindsym $mod+v split v
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-# toggle tiling / floating
-bindsym $mod+space floating toggle
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-# focus the parent container
-bindsym $mod+a focus parent
-# move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
-# Start rofi
-bindsym $mod+d exec --no-startup-id rofi -show run
-# Brightness controls (light)
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-# Volume controls (Pulse)
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10% 
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -10%
-# Wal
-bindsym $mod+z exec --no-startup-id wal -is $HOME/Pictures/Wallpapers
-# Print Screen
-bindsym Print exec import -window root png:- | xclip -selection c -t image/png
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty
+set $menu rofi -show run
 
-############################################
-#---------------WORKSPACES-----------------#
-############################################
-# Workspace variables
-set $ws1 "1"
-set $ws2 "2" 
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9" 
-set $ws10 "10"
-# Switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+floating_modifier $mod normal
 
-############################################
-#------------------MODES-------------------#
-############################################
-# resize window (you can also use the mouse for that)
+#
+# Keybindings
+#
+bindsym --to-code {
+    $mod+Shift+v exec copyq toggle
+    XF86MonBrightnessUp exec light -A 10
+    XF86MonBrightnessDown exec light -U 10
+
+    $mod+Return exec $term
+    $mod+q kill
+    $mod+d exec $menu
+
+    $mod+Shift+r reload
+    $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    $mod+$left focus left
+    $mod+$down focus down
+    $mod+$up focus up
+    $mod+$right focus right
+
+    $mod+Left focus left
+    $mod+Down focus down
+    $mod+Up focus up
+    $mod+Right focus right
+
+    $mod+Shift+$left move left
+    $mod+Shift+$down move down
+    $mod+Shift+$up move up
+    $mod+Shift+$right move right
+    
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
+
+    $mod+1 workspace number 1
+    $mod+2 workspace number 2
+    $mod+3 workspace number 3
+    $mod+4 workspace number 4
+    $mod+5 workspace number 5
+    $mod+6 workspace number 6
+    $mod+7 workspace number 7
+    $mod+8 workspace number 8
+    $mod+9 workspace number 9
+    $mod+0 workspace number 10
+
+    $mod+Shift+1 move container to workspace number 1
+    $mod+Shift+2 move container to workspace number 2
+    $mod+Shift+3 move container to workspace number 3
+    $mod+Shift+4 move container to workspace number 4
+    $mod+Shift+5 move container to workspace number 5
+    $mod+Shift+6 move container to workspace number 6
+    $mod+Shift+7 move container to workspace number 7
+    $mod+Shift+8 move container to workspace number 8
+    $mod+Shift+9 move container to workspace number 9
+    $mod+Shift+0 move container to workspace number 10
+
+    $mod+b splith
+    $mod+v splitv
+
+    $mod+s layout stacking
+    $mod+w layout tabbed
+    $mod+e layout toggle split
+
+    $mod+f fullscreen
+
+    $mod+Shift+space floating toggle
+
+    $mod+a focus parent
+
+    $mod+Shift+minus move scratchpad
+    $mod+minus scratchpad show
+    $mod+r mode "resize"
+}
+
+#
+# Resizing containers:
+#
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-		# Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
-		# same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
-		# back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    bindsym --to-code {
+        $left resize shrink width 10px
+        $down resize grow height 10px
+        $up resize shrink height 10px
+        $right resize grow width 10px
+
+        Left resize shrink width 10px
+        Down resize grow height 10px
+        Up resize shrink height 10px
+        Right resize grow width 10px
+
+        Return mode "default"
+        Escape mode "default"
+    }
 }
 
-bindsym $mod+r mode "resize"
+#
+# Status Bar:
+#
+bar {
+    position top
 
-############################################
-#-------------BORDERS/GAPS-----------------#
-############################################
-# Gaps
-gaps inner 15
-gaps outer 10
-set $mode_gaps Toggle gaps: (1) on (2) off
-bindsym $mod+g mode "$mode_gaps"
-mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 15, gaps outer all set 10, border pixel 4, exec polybar-msg cmd show
-    bindsym 2 mode "default", gaps inner all set 0, gaps outer all set 0, border pixel 1, exec polybar-msg cmd hide
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
 
-# Border size
-for_window [class=".*"] border pixel 4
+#
+# Inputs
+#
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    scroll_factor 0.5
+    accel_profile adaptive
+    pointer_accel 0.2
+    dwt disabled
+}
 
-############################################
-#---------------STARTUP--------------------#
-############################################
-# exec_always --no-startup-id compton --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method exchange
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id ~/.fehbg
-# exec_always --no-startup-id xautolock -locker i3lock --script -i -notify 30 -time 10
-# exec_always --no-startup-id wal -Rs
-exec_always --no-startup-id dunst -Rs
+input * xkb_layout "us,ru"
 
-output "*" background "~/.dotfiles/Current/wallpaper.png" fill
+input type:keyboard {
+    xkb_options grp:lalt_lshift_toggle,compose:caps
+}
+
+
+include /etc/sway/config.d/*

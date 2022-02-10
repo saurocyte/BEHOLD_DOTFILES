@@ -1,6 +1,5 @@
 * {
-	accent: #FFFFFF;
-    foreground:         		@accent;
+    foreground:         		#FFFFFF;
     background:         		rgba(0, 0, 0, 0.70);
     transparent:				rgba(0, 0, 0, 0);
 
@@ -28,6 +27,7 @@
     border-color:                @background;
     separatorcolor:              @foreground;
     background-color:            @transparent;
+    text-color:                  @foreground;
     spacing:                     10;
 }
 
@@ -35,6 +35,7 @@ window {
     background-color: 		@background;
     border:   				0;
     padding: 				0;
+    fullscreen:             true;
 }
 
 mainbox {
@@ -59,68 +60,30 @@ listview {
     border-color: 			@separatorcolor;
     spacing:      			10px;
     padding: 				10 1% 10;
-}
-
-element {
-    border:  				0;
-    padding: 				10 10 10;
-}
-element.normal.normal {
-    background-color: 		@normal-background;
-    text-color:       		@normal-foreground;
-}
-element.normal.urgent {
-    background-color: 		@urgent-background;
-    text-color:       		@urgent-foreground;
-}
-element.normal.active {
-    background-color: 		@active-background;
-    text-color:       		@active-foreground;
-}
-element.selected.normal {
-    background-color: 		@selected-normal-background;
-    text-color:       		@selected-normal-foreground;
-}
-element.selected.urgent {
-    background-color: 		@selected-urgent-background;
-    text-color:       		@selected-urgent-foreground;
-}
-element.selected.active {
-    background-color: 		@selected-active-background;
-    text-color:       		@selected-active-foreground;
-}
-element.alternate.normal {
-    background-color: 		@alternate-normal-background;
-    text-color:       		@alternate-normal-foreground;
-}
-element.alternate.urgent {
-    background-color: 		@alternate-urgent-background;
-    text-color:       		@alternate-urgent-foreground;
-}
-element.alternate.active {
-    background-color: 		@alternate-active-background;
-    text-color:       		@alternate-active-foreground;
+    columns:                3;  
 }
 
 scrollbar {
-    handle-color: 			@normal-foreground;
     width:        			4px ;
     border:       			0;
     handle-width: 			8px ;
     padding:      			0;
 }
 
-button.selected {
+inputbar {
+	children: [prompt, entry];
+}
+
+element {
+    border:  				0;
+    padding: 				10 10 10;
+}
+
+element.selected {
     background-color: 		@selected-normal-background;
     text-color:       		@selected-normal-foreground;
 }
-inputbar {
-    text-color: 			@normal-foreground;
-	children: [prompt, entry];
-}
-entry {
-    text-color: 			@normal-foreground;
-}
-prompt {
-    text-color: 			@normal-foreground;
+
+element-text {
+    text-color: inherit;
 }

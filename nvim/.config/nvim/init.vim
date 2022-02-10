@@ -109,7 +109,6 @@ set clipboard=unnamedplus
 "inoremap " ""<left>
 "inoremap ' ''<left>
 "inoremap ( ()<left>
-"inoremap [ []<left>
 "inoremap { {}<left>
 
 " Tabs
@@ -177,7 +176,7 @@ set tabstop=4
 " Disable wrapping
 set nowrap
 " Current dir = file dir
-set autochdir
+" set autochdir
 " Autosave
 set autowrite
 " Tabs to spaces

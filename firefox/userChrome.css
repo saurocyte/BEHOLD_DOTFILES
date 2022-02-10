@@ -33,11 +33,6 @@ hbox.titlebar-buttonbox-container:nth-child(6) > hbox:nth-child(1){
   margin-top: var(--toolbar-height) !important;
 }
 
-/*#main-window[title^="Firefox Developer Edition"] #PersonalToolbar {
-  visibility: visible !important;
-  margin-top: -1px !important;
-}/
-
 /* lock sidebar to height by doing the inverse margin of the toolbar element */
 #sidebar-box {
   z-index: 1000 !important;
@@ -61,9 +56,6 @@ hbox.titlebar-buttonbox-container:nth-child(6) > hbox:nth-child(1){
   display: none;
 }
 
-/* Hide the title bar 
-#titlebar{ visibility: collapse; }*/
-
 /* hide normal horizontal tab bar */
 #TabsToolbar { display: none !important; }
 
@@ -73,12 +65,3 @@ toolbar#nav-bar {
   margin-left: var(--sidebar-width);
   padding-left: 7px;
 }
-
-/*#sidebar-splitter{
-   width: 2px !important;
-   background-color: transparent !important;
-   box-shadow: inset 8px 0px 14px -8px ThreeDShadow !important;
-   border: none !important;
-   border-left: 3px solid Window !important;
-}
-*/

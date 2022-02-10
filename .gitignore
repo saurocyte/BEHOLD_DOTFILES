@@ -1,1 +1,5 @@
-**/nvim/.config/nvim/plugged/**
+**/nvim/**/plugged
+**/nvim/**/plug.vim.old
+**/nvim/**/.netrwhist
+**/ranger/plugins
+**/vscode
