@@ -5,7 +5,7 @@ function list_interfaces2 {
 }
 
 function kill_socket_process {
-  sudo ss -apn | grep $1 | grep -Po '(?<=pid=)\d+' | sort -u | sudo xargs -L1 kill -KILL
+  sudo ss -apn | grep $1 | grep -Po '(?<=pid=)\d+' | sort | uniq -u | sudo xargs -L1 kill -KILL
 }
 
 function start_server {

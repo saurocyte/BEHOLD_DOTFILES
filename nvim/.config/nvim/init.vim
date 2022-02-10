@@ -96,15 +96,21 @@ nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 " Langmap
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
+" F2 toggles line numbers
+nnoremap <F2> :set nonumber!<CR>
+
+" F3 
+nnoremap <C-c> noh<CR>
+
 " Every yank is + yank
 set clipboard=unnamedplus
 
 " Closing brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
 
 " Tabs
 noremap <C-Tab> :<C-U>next<CR>
@@ -132,7 +138,7 @@ nmap gc <Plug>Kwbd
 set termguicolors
 set background=dark
 
-"-> Line numbers
+" Line numbers
 " Enable numbers
 set number
 " Number column width
@@ -140,7 +146,7 @@ set numberwidth=3
 " Non highlighted numbers color
 hi LineNr ctermfg=grey guifg=grey
 
-"-> Line highlight
+" Line highlight
 " Line (including numbers) highlight
 set cursorline
 " Make highlighted number bold
@@ -150,15 +156,14 @@ hi CursorLine cterm=NONE guibg=NONE
 " Do not show -- Insert --
 set noshowmode
 
-"-> Lightline
+" Lightline
 " Show tabline
 set showtabline=2  " always show tabline
 
-"-> Fold highlight
+" Fold highlight
 hi Folded guibg=NONE
 
-colorscheme nord
-
+" colorscheme gruvbox
 
 """ Formatting
 set modelineexpr
@@ -179,7 +184,6 @@ set autowrite
 set expandtab
 ""
 " """ - category
-" ->  - subcategory
 " "   - comment
 
 

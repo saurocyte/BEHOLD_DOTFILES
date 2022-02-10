@@ -1,5 +1,13 @@
 source /home/me/.bash_funcs
 
+export EDITOR=nvim
+export K9S_EDITOR=nvim
+
+alias vim=nvim
+alias tmux='tmux new -As0'
+
+shopt -s extglob
+
 repos='/mnt/d/git'
 
 # If not running interactively, don't do anything

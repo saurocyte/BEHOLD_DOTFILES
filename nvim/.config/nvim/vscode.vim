@@ -1,8 +1,6 @@
 call plug#begin()
     " Stuff with parenteses
     Plug 'tpope/vim-surround'
-	" Colors
-	Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Langmap
